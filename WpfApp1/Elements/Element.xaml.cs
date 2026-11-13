@@ -20,9 +20,12 @@ namespace WpfApp1.Elements
     /// </summary>
     public partial class Element : UserControl
     {
-        public Element()
+        public Element(Classes.Book Book)
         {
             InitializeComponent();
+            tbName.Text = $"Наименование: {Book.Name} ({Book.Year} г.)";
+            tbGenre.Text = $"Жанр: {Book.ToGenres()}";
+            tbAuthor.Text = $"Автор: {Book.ToAuthors()}";
         }
     }
 }

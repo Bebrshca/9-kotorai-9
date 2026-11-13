@@ -6,7 +6,13 @@
              xmlns:local="clr-namespace:WpfApp1.Elements"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
+    <Grid Height="100" Background="#FF6AADED" Margin="0,0,0,10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="tbName" Text="Наименование: фы ну ну" Margin="10,10,9.8,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" Grid.ColumnSpan="3"/>
+        <TextBlock x:Name="tbGenre" Text="Жанр: фыв фыв фыв фыв фыв фыв фыв фыв фыв фыв фыв фыв фыв фыв фыв фыв " Margin="10,36,9.8,10" Foreground="White" TextWrapping="Wrap"/>
+        <TextBlock x:Name="tbAuthor" Text="Жанр: фыв фыв фыв фыв фыв фыв фыв фыв фыв фыв фыв фыв фыв фыв фыв фыв " Margin="9.2,36,9.8,10" Foreground="White" TextWrapping="Wrap" Grid.Column="1"/>
     </Grid>
 </UserControl>
