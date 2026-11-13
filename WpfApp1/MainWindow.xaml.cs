@@ -83,5 +83,30 @@ namespace WpfApp1
                 FindBook = FindBook.FindAll(x => x.Year == Convert.ToInt32(cbYear.SelectedItem.ToString()));
             CreateUI(FindBook);
         }
+        //сохранение задание
+        public void SaveToTxt()
+        {
+            using (StreamWriter writer = new StreamWriter("save.txt"))
+            {
+                foreach (var author in AllAuthors)
+                {
+                    writer.WriteLine($"{author.Id}; {author.FIO}");
+                }
+                foreach (var genre in AllGenres)
+                {
+                    writer.WriteLine($"{genre.Id}; {genre.Name}");
+                }
+                foreach (var book in AllBooks)
+                {
+                    writer.WriteLine($"{book.Id}; {book.Name}; Год: {book.Year}");
+                }
+            }
+            MessageBox.Show("сохранено");
+        }
+
+        private void Save(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

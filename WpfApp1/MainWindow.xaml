@@ -19,9 +19,10 @@
             <ComboBox x:Name="cbAuthors" Margin="10,90,9.8,0" VerticalAlignment="Top" SelectionChanged="SelectAuthor"/>
             <ComboBox x:Name="cbGenres" Margin="10.2,90,9.6,0" VerticalAlignment="Top" Grid.Column="1" SelectionChanged="SelectAuthor"/>
             <ComboBox x:Name="cbYear" Margin="10.2,90,9.6,0" VerticalAlignment="Top" Grid.Column="2" SelectionChanged="SelectAuthor"/>
+
         </Grid>
         <ScrollViewer Margin="0,120,-4,0">
-            <StackPanel x:Name="parent"/>
+            <Button Content="Button" Click="Save"  Height="42" Width="138"/>
         </ScrollViewer>
     </Grid>
 </Window>
